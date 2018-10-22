@@ -41,8 +41,8 @@ on getPositionOfItemInList(theItem, theList)
 end getPositionOfItemInList
 
 
-property safariPath : "Users:vaibhavthakkar:Desktop:SafariTabs:"
-property chromePath : "Users:vaibhavthakkar:Desktop:ChromeTabs:"
+property safariPath : "[PROVIDE_THE_PATH_HERE_FOR_SAFARI_TABS]"
+property chromePath : "[PROVIDE_THE_PATH_HERE_FOR_CHROME_TABS]"
 
 -- Main running handler
 on run argv

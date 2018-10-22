@@ -11,6 +11,9 @@ Currently, only Google Chrome and Safari are supported in this script.
 * Open the script by double clcking on the file, provide the path to save your links in line where it's written    
     * ` property safariPath : [PROVIDE_THE_PATH_HERE_FOR_SAFARI_TABS] `  
     * ` property chromePath : [PROVIDE_THE_PATH_HERE_FOR_CHROME_TABS] `  
+ **Note**: Path should be absolute and separated by colons instead of slash, **also ending with a colon**.
+   for ex. - if the path is "/Users/vaithak/Desktop" -> you should write "Users:vaithak:Desktop:".  
+  
 * Run 
 ```
   osascript smbt.applescript [Name_of_browser]
