@@ -24,6 +24,9 @@ Currently, only Google Chrome and Safari are supported in this script.
 * Similarly for "Google Chrome", run  
 ` osascript smbt.applescript "Google Chrome" ` 
 
+### Demo
+![usage](https://github.com/vaithak/smbt/blob/master/usage.gif)  
+
 ## Features left to implement
 * Add support for Firefox.  
 * Feature to support dynamic path to store files, which the user can give as an argument.  
