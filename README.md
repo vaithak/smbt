@@ -25,7 +25,7 @@ Currently, only Google Chrome and Safari are supported in this script.
 ` osascript smbt.applescript "Google Chrome" ` 
 
 ### Demo
-![usage](https://github.com/vaithak/smbt/blob/master/usage.gif)  
+![usage](https://github.com/vaithak/smbt/blob/master/demoUsage.gif)  
 
 ## Features left to implement
 * Add support for Firefox.  
