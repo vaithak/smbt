@@ -8,7 +8,7 @@ on writeTextToFile(theText, theFile, overwriteExistingContent)
 		-- Clear the file if content should be overwritten
 		if overwriteExistingContent is true then set eof of theOpenedFile to 0
 		-- Write the new content to the file
-		write theText to theOpenedFile starting at eof
+		write theText to theOpenedFile
 		-- Close the file
 		close access theOpenedFile
 		-- Return a boolean indicating that writing was successful
@@ -42,10 +42,11 @@ end getPositionOfItemInList
 
 
 property safariPath : "[PROVIDE_THE_PATH_HERE_FOR_SAFARI_TABS]"
-property chromePath : "[PROVIDE_THE_PATH_HERE_FOR_CHROME_TABS]"
+property chromePath : "Users:vaibhavthakkar:Desktop:github:smbt:"
 
 -- Main running handler
 on run argv
+	set LF to character id 10
 	set browser_list to {"Safari", "Google Chrome"}
 	set all_url_list to {}
 	set paths_list to {safariPath, chromePath}
@@ -85,7 +86,7 @@ on run argv
 					repeat with t in (tabs of thisWind)
 						set TabTitle to (title of t)
 						set TabURL to (URL of t)
-						set TabInfo to ("" & TabTitle & return & TabURL & return)
+						set TabInfo to (TabTitle & LF & TabURL & LF)
 						copy TabInfo to the end of url_list
 					end repeat
 					
@@ -96,11 +97,8 @@ on run argv
 		end if
 		
 		repeat with a from 1 to length of all_url_list
-			local resultText
 			set currList to item a of all_url_list
-			set resultText to convertListToString(currList, "
-
-")
+			set resultText to convertListToString(currList, LF)
 			writeTextToFile(resultText, folderName & a & ".txt", true)
 		end repeat
 	end if
