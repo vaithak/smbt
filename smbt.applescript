@@ -40,9 +40,22 @@ on getPositionOfItemInList(theItem, theList)
 	return 0
 end getPositionOfItemInList
 
+-- Handler that converts a path to an a POSIX path string
+on convertPathToPOSIXString(thePath)
+	tell application "System Events"
+		try
+			set thePath to path of disk item (thePath as string)
+		on error
+			set thePath to path of thePath
+		end try
+	end tell
+	return POSIX path of thePath
+end convertPathToPOSIXString
+
+-- convertPathToPOSIXString(POSIX file ("/Users/vaibhavthakkar"))
 
 property safariPath : "[PROVIDE_THE_PATH_HERE_FOR_SAFARI_TABS]"
-property chromePath : "Users:vaibhavthakkar:Desktop:github:smbt:"
+property chromePath : "[PROVIDE_THE_PATH_HERE_FOR_CHROME_TABS]"
 
 -- Main running handler
 on run argv
