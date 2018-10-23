@@ -36,6 +36,6 @@ Currently, only Google Chrome and Safari are supported in this script.
 * Steps for contributing
   * Clone this repo
   * Edit and test the script in "Script Editor" Application, preinstalled in MacOS.  
-  * Run the script as given in the running instructions above.  
+  * Run the script to test your code as given in the running instructions above.  
   * Send a PR :tada: .  
 
